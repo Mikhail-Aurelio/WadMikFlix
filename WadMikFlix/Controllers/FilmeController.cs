@@ -13,7 +13,7 @@ namespace WadMikFlix.Controllers
         public IActionResult Index()
         {
             var teste = _context.Filmes;
-            return View();
+            return View(teste);
         }
     }
 }
