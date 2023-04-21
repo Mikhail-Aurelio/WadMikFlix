@@ -12,8 +12,8 @@ namespace WadMikFlix.Controllers
         }
         public IActionResult Index()
         {
-            var teste = _context.Filmes;
-            return View(teste);
+            ViewData["teste"] = _context.Filmes.Select(f => f.Nome).FirstOrDefault();
+            return View();
         }
     }
 }
